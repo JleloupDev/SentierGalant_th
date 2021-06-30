@@ -32,59 +32,61 @@ $highlight3 = array(
 <?php get_header(); ?>
 
 <div id="main_ba">
-    <div class="article_container" id="img_1">
-        <a href="<?php echo $highlight1["Url"]; ?>">
-            <img src="<?php echo $highlight1["Thumbnail"]; ?>" alt="Thumbnail for first pic">
-        </a>
+    <!-- <div class="square_articles"> -->
+        <div class="article_container" id="img_1">
+            <a href="<?php echo $highlight1["Url"]; ?>">
+                <img src="<?php echo $highlight1["Thumbnail"]; ?>" alt="Thumbnail for first pic">
+            </a>
 
-        <div class="article_text">
-            <div class="article_title">
-                <h3>
-                    <?php echo $highlight1["Post"]->post_title; ?>
-                </h3>
+            <div class="article_text">
+                <div class="article_title">
+                    <h3>
+                        <?php echo $highlight1["Post"]->post_title; ?>
+                    </h3>
 
-                <p class="article_excerpt">
-                    <?php echo $highlight1["Post"]->post_excerpt; ?>
-                </p>
+                    <p class="article_excerpt">
+                        <?php echo $highlight1["Post"]->post_excerpt; ?>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="article_container" id="img_2">
-        <a href="<?php echo $highlight2["Url"]; ?>">
-            <img src="<?php echo $highlight2["Thumbnail"]; ?>" alt="Thumbnail for second pic">
-        </a>
+        <div class="article_container" id="img_2">
+            <a href="<?php echo $highlight2["Url"]; ?>">
+                <img src="<?php echo $highlight2["Thumbnail"]; ?>" alt="Thumbnail for second pic">
+            </a>
 
-        <div class="article_text">
-            <div class="article_title">
-                <h3>
-                    <?php echo $highlight2["Post"]->post_title; ?>
-                </h3>
+            <div class="article_text">
+                <div class="article_title">
+                    <h3>
+                        <?php echo $highlight2["Post"]->post_title; ?>
+                    </h3>
 
-                <p class="article_excerpt">
-                    <?php echo $highlight2["Post"]->post_excerpt; ?>
-                </p>
+                    <p class="article_excerpt">
+                        <?php echo $highlight2["Post"]->post_excerpt; ?>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="article_container" id="img_3">
-        <a href="<?php echo $highlight3["Url"]; ?>">
-            <img src="<?php echo $highlight3["Thumbnail"]; ?>" alt="Thumbnail for third pic">
-        </a>
+        <div class="article_container" id="img_3">
+            <a href="<?php echo $highlight3["Url"]; ?>">
+                <img src="<?php echo $highlight3["Thumbnail"]; ?>" alt="Thumbnail for third pic">
+            </a>
 
-        <div class="article_text">
-            <div class="article_title">
-                <h3>
-                    <?php echo $highlight3["Post"]->post_title; ?>
-                </h3>
+            <div class="article_text">
+                <div class="article_title">
+                    <h3>
+                        <?php echo $highlight3["Post"]->post_title; ?>
+                    </h3>
 
-                <p class="article_excerpt">
-                    <?php echo $highlight3["Post"]->post_excerpt; ?>
-                </p>
+                    <p class="article_excerpt">
+                        <?php echo $highlight3["Post"]->post_excerpt; ?>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </div>
 
 <hr id="hr_bonus_1" />
@@ -174,9 +176,9 @@ $highlight3 = array(
                 <a href="<?php echo $post_url ?>">
                     <img src="<?php echo $post_thumbnail_url; ?>" />
 
-                    <h3>
+                    <a class="pa_nav_articles_title">
                         <?php echo $post_title ?>
-                    </h3>
+                    </a>
                 </a>
             </div>
 

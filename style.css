@@ -1,12 +1,12 @@
+@charset "UTF-8";
 /*
-Theme Name: Sentiergalant_th
-Description: Thème du site "Sentiergalant"
-Author: Jean
-Author URI: a
+Theme Name: SentierGalant_th
+Description: Thème du site www.sentiergalant.com
+Author: jleloupdev@outlook.com
 Template: twentytwenty
 Version: 0.1.0
 */
-a {
+#site-content {
   text-decoration: none !important;
   color: black !important;
 }
@@ -19,20 +19,6 @@ footer {
   background-color: white !important;
 }
 
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Bentham", serif !important;
-}
-
-.header-inner {
-  display: grid !important;
-  grid-template-columns: 30% 40% 30%;
-}
 .header-inner .header-titles-wrapper {
   grid-column: 1;
 }
@@ -50,6 +36,7 @@ h6 {
   color: black !important;
 }
 
+/********************************************** MENU *********************************************/
 .header-navigation-wrapper {
   padding: 1rem;
   margin-bottom: 2rem;
@@ -72,11 +59,13 @@ h6 {
   color: #b6721a !important;
 }
 
+/********************************************* END MENU *********************************************/
+/************************************************** Page d'acceuil ***********************************************/
 #main_ba {
-  width: 100%;
+  width: clamp(600px, 80%, 1168px);
   margin: auto;
   display: grid;
-  grid-template-columns: 20% 40% 20% 20%;
+  grid-template-columns: 60% 40%;
   grid-template-rows: auto auto auto;
 }
 #main_ba .article_container {
@@ -84,6 +73,7 @@ h6 {
 }
 #main_ba .article_container img {
   filter: grayscale(0.3);
+  object-fit: cover;
 }
 #main_ba .article_container#img_1, #main_ba .article_container#img_2, #main_ba .article_container#img_3 {
   border-top: 2px solid black;
@@ -125,15 +115,15 @@ h6 {
   display: block;
 }
 #main_ba #img_1 {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 1/3;
 }
 #main_ba #img_2 {
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 1;
 }
 #main_ba #img_3 {
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 2;
 }
 #main_ba img {
@@ -277,6 +267,11 @@ h1 {
 .nav_articles h2 {
   color: black;
   text-align: center;
+}
+.nav_articles .pa_nav_articles_title {
+  font: inherit;
+  text-decoration: inherit;
+  color: inherit;
 }
 
 .last_articles_content {

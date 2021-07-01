@@ -14,7 +14,7 @@ $thirdColor:#7a3609;
 $mediaMaxWidth: 1260px;
 $mediaTabletWidth: 768px;
 $mediaPhoneWidth: 480px;
-$mediaLowerWidth: 250px;
+$mediaLowerWidth: 275px;
 
 @mixin for-lower {
     @media (max-width: $mediaPhoneWidth) { @content; }
@@ -43,6 +43,10 @@ footer {
     background-color: $mainColor !important;
     font-family: 'Bentham', serif !important;
     background-color: white !important;
+
+    min-width: $mediaLowerWidth;
+    max-width: $mediaMaxWidth;
+    margin: auto;
 }
 
 /********************************************** Header *********************************************/
@@ -148,7 +152,7 @@ footer {
 /************************************************** Page d'acceuil ***********************************************/
 #main_ba {
     // .square_articles {
-        width: clamp(600px, 80%, 1168px);
+        max-width: max(80%, 1168px);
         margin: auto;
 
         display: grid;

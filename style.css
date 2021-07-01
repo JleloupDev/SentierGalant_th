@@ -17,6 +17,9 @@ footer {
   background-color: #FFFF !important;
   font-family: "Bentham", serif !important;
   background-color: white !important;
+  min-width: 275px;
+  max-width: 1260px;
+  margin: auto;
 }
 
 /********************************************** Header *********************************************/
@@ -103,7 +106,7 @@ footer {
 
 /************************************************** Page d'acceuil ***********************************************/
 #main_ba {
-  width: clamp(600px, 80%, 1168px);
+  max-width: max(80%, 1168px);
   margin: auto;
   display: grid;
   grid-template-columns: 60% 40%;

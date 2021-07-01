@@ -11,7 +11,27 @@ $secondColor:#b6721a;
 $thirdColor:#7a3609;
 
 
-///Général
+$mediaMaxWidth: 1260px;
+$mediaTabletWidth: 768px;
+$mediaPhoneWidth: 480px;
+$mediaLowerWidth: 250px;
+
+@mixin for-lower {
+    @media (max-width: $mediaPhoneWidth) { @content; }
+}
+
+@mixin for-phones {
+    @media (max-width: $mediaTabletWidth) { @content; }
+}
+
+@mixin for-tablets {
+    @media (max-width: $mediaMaxWidth) { @content; }
+}
+
+
+
+
+
 #site-content {
     text-decoration: none !important;
     color: black !important;
@@ -25,61 +45,104 @@ footer {
     background-color: white !important;
 }
 
-.header-inner {
-    .header-titles-wrapper {
+/********************************************** Header *********************************************/
+
+.header {
+    display:grid;
+    grid-template-rows: 25% 50% 25%;
+
+    &__logo {
+
         grid-column: 1;
+        grid-row: 1;
+        
+        padding-top: 1rem;
+
+        @include for-phones {
+            display: none;
+        }
     }
 
-    #title_area {
+    &__titles {
         grid-column: 2;
+        grid-row: 1;
         text-align: center;
 
-        #site_title {
-            h1 {
-                font-size: 4rem;
-                margin: 0;
-                color: $thirdColor !important;
+        @include for-phones {
+            .site-description {
+                display: none;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: $thirdColor !important;
+        }
+
+        .site-description {
+            color: black !important;
+        }
+    }
+
+    &__action-menu {
+        display: none;
+
+        padding-top: 1rem;
+
+        @include for-phones {
+            display: block;
+        }
+
+        .toggle-text {
+            display: none;
+        }
+    }
+
+    &__action-search {
+        grid-column: 3;
+        grid-row: 1;
+
+        padding-top: 1rem;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    &__menu {
+        grid-column: 1/4;
+        grid-row: 2;
+
+        padding: 1rem;
+        margin-bottom: 2rem;
+
+        @include for-phones {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                color: white;
+
+                .icon {
+                    color: $secondColor !important;
+                }
+
+                .sub-menu {
+                    flex-direction: column;
+                }
+
+                a {
+                    color: $secondColor !important
+                }
             }
         }
     }
 }
-
-.site-description {
-    color: black !important; //$fourthColor !important;
-}
-
-
-/********************************************** MENU *********************************************/
-
-.header-navigation-wrapper {
-    // background-color: $thirdColor;
-    padding: 1rem;
-    margin-bottom: 2rem;
-
-    ul {
-        display: flex;
-        justify-content: center;
-
-        li {
-            color: white;
-
-            .icon {
-                color: $secondColor !important;
-            }
-
-            .sub-menu {
-                flex-direction: column;
-            }
-        }
-    }
-}
-
-.primary-menu > li > a {
-    color: $secondColor !important
-}
-
-/********************************************* END MENU *********************************************/
-
 
 /************************************************** Page d'acceuil ***********************************************/
 #main_ba {
@@ -262,17 +325,7 @@ hr {
 
 
 
-
-h1 {
-    text-align: center;
-    font-family: Tahoma, Arial, sans-serif;
-    margin: 80px 0;
-}
-
-.button:hover {
-    background: #06D85F;
-}
-
+//Popup
 .overlay {
     position: fixed;
     top: 0;
@@ -411,7 +464,7 @@ h1 {
     }
 }
 
-.header-footer-group {
+.header {
     border-color: black;
     background-color: white !important;
 }
@@ -425,6 +478,10 @@ h1 {
 
 
 #site-header,
+.header__action-search,
+.header__action-search-btn,
+.header__action-menu,
+.header__action-menu-btn,
 .footer-nav-widgets-wrapper,
 #site-footer,
 .menu-modal,
@@ -432,6 +489,7 @@ h1 {
 .search-modal-inner,
 .archive-header,
 .singular .entry-header,
+.header,
 .singular .featured-media::before,
 .wp-block-pullquote::before {
     background-color: white !important;

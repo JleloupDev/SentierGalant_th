@@ -66,6 +66,7 @@ footer {
     &__titles {
         grid-column: 2;
         grid-row: 1;
+        padding-top: 1rem;
         text-align: center;
 
         @include for-phones {
@@ -295,7 +296,7 @@ hr {
 }
 
 #bonus_popup_btn {
-    width: 40%;
+    width: 80%;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.2);
     padding: 35px;

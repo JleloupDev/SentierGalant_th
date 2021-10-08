@@ -52,7 +52,7 @@ if( ! empty( $my_posts ) ){
 <?php get_header(); ?>
 
 <div>
-    <?php echo json_encode($hilighted_posts);>
+    <?php echo json_encode($hilighted_posts); ?>
 </div>
 
 <div id="main_ba">

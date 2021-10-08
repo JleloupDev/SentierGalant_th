@@ -55,18 +55,18 @@ if( ! empty( $headpage_posts ) ){
 
 <div id="main_ba">
     <div class="article_container" id="img_1">
-        <a href="<?php echo $hilighted_posts[0]["Url"]; ?>">
-            <img src="<?php echo $hilighted_posts[0]["Thumbnail"]; ?>" alt="Thumbnail for first pic">
+        <a href="<?php echo $headpage_posts[0]["Url"]; ?>">
+            <img src="<?php echo $headpage_posts[0]["Thumbnail"]; ?>" alt="Thumbnail for first pic">
         </a>
 
         <div class="article_text">
             <div class="article_title">
                 <h3>
-                    <?php echo $hilighted_posts[0]["Post"]->post_title; ?>
+                    <?php echo $headpage_posts[0]["Post"]->post_title; ?>
                 </h3>
 
                 <p class="article_excerpt">
-                    <?php echo $hilighted_posts[0]["Post"]->post_excerpt; ?>
+                    <?php echo $headpage_posts[0]["Post"]->post_excerpt; ?>
                 </p>
             </div>
         </div>

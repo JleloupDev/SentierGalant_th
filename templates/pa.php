@@ -7,8 +7,8 @@
 $postId = $post->ID;
 
 // $highlight1_Id = get_post_meta($post->ID, 'HighlightPost1', true);
-// $highlight2_Id = get_post_meta($post->ID, 'HighlightPost2', true);
-// $highlight3_Id = get_post_meta($post->ID, 'HighlightPost3', true);
+// $headpage_posts_i[1]_Id = get_post_meta($post->ID, 'HighlightPost2', true);
+// $headpage_posts_i[2]_Id = get_post_meta($post->ID, 'HighlightPost3', true);
 
 // $highlight1 = array(
 //     "Post" => get_post($highlight1_Id),
@@ -16,16 +16,16 @@ $postId = $post->ID;
 //     "Url" => get_permalink($highlight1_Id)
 // );
 
-// $highlight2 = array(
-//     "Post" => get_post($highlight2_Id),
-//     "Thumbnail" => get_the_post_thumbnail_url($highlight2_Id),
-//     "Url" => get_permalink($highlight2_Id)
+// $headpage_posts_i[1] = array(
+//     "Post" => get_post($headpage_posts_i[1]_Id),
+//     "Thumbnail" => get_the_post_thumbnail_url($headpage_posts_i[1]_Id),
+//     "Url" => get_permalink($headpage_posts_i[1]_Id)
 // );
 
-// $highlight3 = array(
-//     "Post" => get_post($highlight3_Id),
-//     "Thumbnail" => get_the_post_thumbnail_url($highlight3_Id),
-//     "Url" => get_permalink($highlight3_Id)
+// $headpage_posts_i[2] = array(
+//     "Post" => get_post($headpage_posts_i[2]_Id),
+//     "Thumbnail" => get_the_post_thumbnail_url($headpage_posts_i[2]_Id),
+//     "Url" => get_permalink($headpage_posts_i[2]_Id)
 // );
 
 $headpage_posts_i = array();
@@ -51,9 +51,9 @@ if( ! empty( $headpage_posts ) ){
 
 <?php get_header(); ?>
 
-<div>
+<!-- <div>
     <?php echo json_encode($headpage_posts_i); ?>
-</div>
+</div> -->
 
 <div id="main_ba">
     <div class="article_container" id="img_1">
@@ -75,36 +75,36 @@ if( ! empty( $headpage_posts ) ){
     </div>
 
     <div class="article_container" id="img_2">
-        <a href="<?php echo $highlight2["Url"]; ?>">
-            <img src="<?php echo $highlight2["Thumbnail"]; ?>" alt="Thumbnail for second pic">
+        <a href="<?php echo $headpage_posts_i[1]["Url"]; ?>">
+            <img src="<?php echo $headpage_posts_i[1]["Thumbnail"]; ?>" alt="Thumbnail for second pic">
         </a>
 
         <div class="article_text">
             <div class="article_title">
                 <h3>
-                    <?php echo $highlight2["Post"]->post_title; ?>
+                    <?php echo $headpage_posts_i[1]["Post"]->post_title; ?>
                 </h3>
 
                 <p class="article_excerpt">
-                    <?php echo $highlight2["Post"]->post_excerpt; ?>
+                    <?php echo $headpage_posts_i[1]["Post"]->post_excerpt; ?>
                 </p>
             </div>
         </div>
     </div>
 
     <div class="article_container" id="img_3">
-        <a href="<?php echo $highlight3["Url"]; ?>">
-            <img src="<?php echo $highlight3["Thumbnail"]; ?>" alt="Thumbnail for third pic">
+        <a href="<?php echo $headpage_posts_i[2]["Url"]; ?>">
+            <img src="<?php echo $headpage_posts_i[2]["Thumbnail"]; ?>" alt="Thumbnail for third pic">
         </a>
 
         <div class="article_text">
             <div class="article_title">
                 <h3>
-                    <?php echo $highlight3["Post"]->post_title; ?>
+                    <?php echo $headpage_posts_i[2]["Post"]->post_title; ?>
                 </h3>
 
                 <p class="article_excerpt">
-                    <?php echo $highlight3["Post"]->post_excerpt; ?>
+                    <?php echo $headpage_posts_i[2]["Post"]->post_excerpt; ?>
                 </p>
             </div>
         </div>

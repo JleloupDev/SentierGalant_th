@@ -28,7 +28,24 @@ $postId = $post->ID;
 //     "Url" => get_permalink($highlight3_Id)
 // );
 
-$headpage_posts = get_tags($args = 'headpage');
+$hilighted_posts = array();
+
+$headpage_posts_args = array(
+    'tag' => 'headpage'
+);
+
+$headpage_posts = get_posts($headpage_posts_args);
+
+if( ! empty( $my_posts ) ){
+	foreach ( $my_posts as $p ){
+        $hilighted_posts[] = array (
+            "Post" => get_post($p),
+            "Thumbnail" => get_the_post_thumbnail_url($p),
+            "Url" => get_permalink($p)
+        ) ;
+	}
+}
+
 
 ?>
 
@@ -36,18 +53,18 @@ $headpage_posts = get_tags($args = 'headpage');
 
 <div id="main_ba">
     <div class="article_container" id="img_1">
-        <a href="<?php echo $highlight1["Url"]; ?>">
-            <img src="<?php echo $highlight1["Thumbnail"]; ?>" alt="Thumbnail for first pic">
+        <a href="<?php echo $hilighted_posts[0]["Url"]; ?>">
+            <img src="<?php echo $hilighted_posts[0]["Thumbnail"]; ?>" alt="Thumbnail for first pic">
         </a>
 
         <div class="article_text">
             <div class="article_title">
                 <h3>
-                    <?php echo $highlight1["Post"]->post_title; ?>
+                    <?php echo $hilighted_posts[0]["Post"]->post_title; ?>
                 </h3>
 
                 <p class="article_excerpt">
-                    <?php echo $highlight1["Post"]->post_excerpt; ?>
+                    <?php echo $hilighted_posts[0]["Post"]->post_excerpt; ?>
                 </p>
             </div>
         </div>

@@ -51,6 +51,10 @@ if( ! empty( $my_posts ) ){
 
 <?php get_header(); ?>
 
+<div>
+    <php echo json_encode($hilighted_posts);>
+</div>
+
 <div id="main_ba">
     <div class="article_container" id="img_1">
         <a href="<?php echo $hilighted_posts[0]["Url"]; ?>">

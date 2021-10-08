@@ -28,17 +28,15 @@ $postId = $post->ID;
 //     "Url" => get_permalink($highlight3_Id)
 // );
 
-$hilighted_posts = array();
-
 $headpage_posts_args = array(
     'tag' => 'headpage'
 );
 
 $headpage_posts = get_posts($headpage_posts_args);
 
-if( ! empty( $my_posts ) ){
-	foreach ( $my_posts as $p ){
-        $hilighted_posts[] = array (
+if( ! empty( $headpage_posts ) ){
+	foreach ( $headpage_posts as $p ){
+        $headpage_posts[] = array (
             "Post" => get_post($p),
             "Thumbnail" => get_the_post_thumbnail_url($p),
             "Url" => get_permalink($p)
@@ -52,7 +50,7 @@ if( ! empty( $my_posts ) ){
 <?php get_header(); ?>
 
 <div>
-    <?php echo json_encode($hilighted_posts); ?>
+    <?php echo json_encode($headpage_posts); ?>
 </div>
 
 <div id="main_ba">

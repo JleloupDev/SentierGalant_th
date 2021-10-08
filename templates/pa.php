@@ -6,27 +6,30 @@
 // global $post;
 $postId = $post->ID;
 
-$highlight1_Id = get_post_meta($post->ID, 'HighlightPost1', true);
-$highlight2_Id = get_post_meta($post->ID, 'HighlightPost2', true);
-$highlight3_Id = get_post_meta($post->ID, 'HighlightPost3', true);
+// $highlight1_Id = get_post_meta($post->ID, 'HighlightPost1', true);
+// $highlight2_Id = get_post_meta($post->ID, 'HighlightPost2', true);
+// $highlight3_Id = get_post_meta($post->ID, 'HighlightPost3', true);
 
-$highlight1 = array(
-    "Post" => get_post($highlight1_Id),
-    "Thumbnail" => get_the_post_thumbnail_url($highlight1_Id),
-    "Url" => get_permalink($highlight1_Id)
-);
+// $highlight1 = array(
+//     "Post" => get_post($highlight1_Id),
+//     "Thumbnail" => get_the_post_thumbnail_url($highlight1_Id),
+//     "Url" => get_permalink($highlight1_Id)
+// );
 
-$highlight2 = array(
-    "Post" => get_post($highlight2_Id),
-    "Thumbnail" => get_the_post_thumbnail_url($highlight2_Id),
-    "Url" => get_permalink($highlight2_Id)
-);
+// $highlight2 = array(
+//     "Post" => get_post($highlight2_Id),
+//     "Thumbnail" => get_the_post_thumbnail_url($highlight2_Id),
+//     "Url" => get_permalink($highlight2_Id)
+// );
 
-$highlight3 = array(
-    "Post" => get_post($highlight3_Id),
-    "Thumbnail" => get_the_post_thumbnail_url($highlight3_Id),
-    "Url" => get_permalink($highlight3_Id)
-);
+// $highlight3 = array(
+//     "Post" => get_post($highlight3_Id),
+//     "Thumbnail" => get_the_post_thumbnail_url($highlight3_Id),
+//     "Url" => get_permalink($highlight3_Id)
+// );
+
+$headpage_posts = get_tags($args = 'headpage');
+
 ?>
 
 <?php get_header(); ?>
@@ -92,6 +95,10 @@ $highlight3 = array(
 <div id="bonus_popup_btn">
     <h3>Découvrez notre vision de l'élégance</h3>
     <a class="button" href="#popup1">Notre guide des chemins du gentleman !</a>
+</div>
+
+<div>
+    <script id="sg-script-615fe8ba708d7" data-url="eyJmb3JtIjo2ODI4NywidXNlciI6IjQ1MTE0In0-" src="https://sg-autorepondeur.com/plugins/form/widget.js">
 </div>
 
 <div id="popup1" class="overlay">

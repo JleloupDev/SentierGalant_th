@@ -51,10 +51,6 @@ if( ! empty( $headpage_posts ) ){
 
 <?php get_header(); ?>
 
-<!-- <div>
-    <?php echo json_encode($headpage_posts_i); ?>
-</div> -->
-
 <div id="main_ba">
     <div class="article_container" id="img_1">
         <a href="<?php echo $headpage_posts_i[0]["Url"]; ?>">

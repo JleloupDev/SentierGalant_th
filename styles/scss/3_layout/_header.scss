@@ -1,0 +1,99 @@
+@use '../0_abstracts' as *;
+
+.header {
+    display:grid;
+    grid-template-rows: 25% 50% 25%;
+
+    &__logo {
+
+        grid-column: 1;
+        grid-row: 1;
+        
+        padding-top: 1rem;
+
+        @include for-phones {
+            display: none;
+        }
+    }
+
+    &__titles {
+        grid-column: 2;
+        grid-row: 1;
+        padding-top: 1rem;
+        text-align: center;
+
+        @include for-phones {
+            .site-description {
+                display: none;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: $thirdColor !important;
+        }
+
+        .site-description {
+            color: black !important;
+        }
+    }
+
+    &__action-menu {
+        display: none;
+
+        padding-top: 1rem;
+
+        @include for-phones {
+            display: block;
+        }
+
+        .toggle-text {
+            display: none;
+        }
+    }
+
+    &__action-search {
+        grid-column: 3;
+        grid-row: 1;
+
+        padding-top: 1rem;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    &__menu {
+        grid-column: 1/4;
+        grid-row: 2;
+
+        padding: 1rem;
+        margin-bottom: 2rem;
+
+        @include for-phones {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                color: white;
+
+                .icon {
+                    color: $secondColor !important;
+                }
+
+                .sub-menu {
+                    flex-direction: column;
+                }
+
+                a {
+                    color: $secondColor !important
+                }
+            }
+        }
+    }
+}

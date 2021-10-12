@@ -6,44 +6,22 @@
 // global $post;
 $postId = $post->ID;
 
-// $highlight1_Id = get_post_meta($post->ID, 'HighlightPost1', true);
-// $headpage_posts_i[1]_Id = get_post_meta($post->ID, 'HighlightPost2', true);
-// $headpage_posts_i[2]_Id = get_post_meta($post->ID, 'HighlightPost3', true);
-
-// $highlight1 = array(
-//     "Post" => get_post($highlight1_Id),
-//     "Thumbnail" => get_the_post_thumbnail_url($highlight1_Id),
-//     "Url" => get_permalink($highlight1_Id)
-// );
-
-// $headpage_posts_i[1] = array(
-//     "Post" => get_post($headpage_posts_i[1]_Id),
-//     "Thumbnail" => get_the_post_thumbnail_url($headpage_posts_i[1]_Id),
-//     "Url" => get_permalink($headpage_posts_i[1]_Id)
-// );
-
-// $headpage_posts_i[2] = array(
-//     "Post" => get_post($headpage_posts_i[2]_Id),
-//     "Thumbnail" => get_the_post_thumbnail_url($headpage_posts_i[2]_Id),
-//     "Url" => get_permalink($headpage_posts_i[2]_Id)
-// );
+$headpage_posts = array_merge(
+    get_posts(array('tag' => 'headpage1')),
+    get_posts(array('tag' => 'headpage2')),
+    get_posts(array('tag' => 'headpage3'))
+);
 
 $headpage_posts_i = array();
 
-$headpage_posts_args = array(
-    'tag' => 'headpage'
-);
-
-$headpage_posts = get_posts($headpage_posts_args);
-
-if( ! empty( $headpage_posts ) ){
-	foreach ( $headpage_posts as $p ){
-        $headpage_posts_i[] = array (
+if (!empty($headpage_posts)) {
+    foreach ($headpage_posts as $p) {
+        $headpage_posts_i[] = array(
             "Post" => get_post($p),
             "Thumbnail" => get_the_post_thumbnail_url($p),
             "Url" => get_permalink($p)
-        ) ;
-	}
+        );
+    }
 }
 
 
@@ -109,104 +87,45 @@ if( ! empty( $headpage_posts ) ){
 
 <hr id="hr_bonus_1" />
 
-<div id="bonus_popup_btn">
-    <h3>Découvrez notre vision de l'élégance</h3>
-    <a class="button" href="#popup1">Notre guide des chemins du gentleman !</a>
-</div>
-
-<div>
-    <script id="sg-script-615fe8ba708d7" data-url="eyJmb3JtIjo2ODI4NywidXNlciI6IjQ1MTE0In0-" src="https://sg-autorepondeur.com/plugins/form/widget.js">
-</div>
-
-<div id="popup1" class="overlay">
-    <div class="popup">
-        <h2>Notre vision de l'élégance</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-            <div class="wrapper rounded6" id="templateContainer">
-                <div id="templateBody" class="bodyContent rounded6">
-                    <div class="indicates-required">
-                        <span class="asterisk">*</span> indications requises
-                    </div>
-
-                    <form action="https://gmail.us7.list-manage.com/subscribe/post" method="POST">
-                        <input type="hidden" name="u" value="7fc5d18dc2bc474cf151f4f14">
-                        <input type="hidden" name="id" value="2c2a06e942">
-
-                        <div id="mergeTable" class="mergeTable">
-                            <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-                                <label for="MERGE0">Address Email<span class="req asterisk">*</span></label>
-                                <div class="field-group">
-                                    <div class="fx-relay-email-input-wrapper"><input type="email" autocapitalize="none" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" style="padding-right: 50px;">
-                                        <div class="fx-relay-icon" style="top: 0px; bottom: 0px;"><button class="fx-relay-button" id="fx-relay-button" type="button" title="Generate new alias"></button></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mergeRow dojoDndItem mergeRow-number" id="mergeRow-1">
-                                <label for="MERGE1">Code postal</label>
-                                <div class="field-help">Simplement pour savoir ou sont nos lecteurs ! Vous n'êtes pas obligé de donner votre code postal.</div>
-                                <div class="field-group">
-                                    <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
-                                </div>
-                            </div>
-
-                            <div class="mergeRow dojoDndItem mergeRow-number" id="mergeRow-3">
-                                <label for="MERGE3">Année de naissance</label>
-                                <div class="field-help">Pour savoir quel age ont nos lecteurs ! Vous n'êtes pas obligé de nous communiquer cette information</div>
-                                <div class="field-group">
-                                    <input type="text" name="MERGE3" id="MERGE3" size="25" value="">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="submit_container clear">
-                            <input type="submit" class="formEmailButton" name="submit" value="S'abonner">
-                        </div>
-                        <input type="hidden" name="ht" value="236858dc84bc929390f597d3ca6de7ac51528fa7:MTYxMjE3NjQ1MS45NTE0">
-                        <input type="hidden" name="mc_signupsource" value="hosted">
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
+<?php get_template_part('template-parts/sgpopup'); ?>
 
 
 <hr id="hr_bonus_2" />
 
-<div class="nav_articles">
+<div>
     <h2>Nos derniers articles</h2>
 
-    <nav class="last_articles_content">
-        <?php
-        $args = array(
-            'numberposts' => '5',
-        );
-        $recent_posts = wp_get_recent_posts($args);
-        foreach ($recent_posts as $recent) :
-            $post_id        = $recent['ID'];
-            $post_url       = get_permalink($recent['ID']);
-            $post_title     = $recent['post_title'];
-            $post_content   = $recent['post_content'];
-            $post_thumbnail_url = get_the_post_thumbnail_url($recent['ID']);
-        ?>
+    <nav class="articles-hint">
+        <ul>
+            <?php
+            $args = array(
+                'numberposts' => '5',
+            );
+            $recent_posts = wp_get_recent_posts($args);
+            foreach ($recent_posts as $recent) :
+                $post_id        = $recent['ID'];
+                $post_url       = get_permalink($recent['ID']);
+                $post_title     = $recent['post_title'];
+                $post_content   = $recent['post_content'];
+                $post_thumbnail_url = get_the_post_thumbnail_url($recent['ID']);
+            ?>
 
-            <div class="recent_post">
-                <a href="<?php echo $post_url ?>">
-                    <img src="<?php echo $post_thumbnail_url; ?>" />
+                <li class="articles-hint__posts">
+                    <a href="<?php echo $post_url ?>">
+                        <div class="squared-container">
+                            <img src="<?php echo $post_thumbnail_url; ?>" />
+                        </div>
 
-                    <a class="pa_nav_articles_title">
-                        <?php echo $post_title ?>
+                        <h4>
+                            <?php echo $post_title ?>
+                        </h4>
                     </a>
-                </a>
-            </div>
+                </li>
 
-        <?php
-        endforeach;
-        ?>
+            <?php
+            endforeach;
+            ?>
+        </ul>
     </nav>
 </div>
 

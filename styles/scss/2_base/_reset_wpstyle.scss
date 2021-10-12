@@ -1,0 +1,41 @@
+@use '../0_abstracts' as *;
+
+#site-content {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+body,
+header,
+footer {
+    background-color: $mainColor !important;
+    font-family: 'Bentham', serif !important;
+    background-color: white !important;
+
+    min-width: $mediaLowerWidth;
+    max-width: $mediaMaxWidth;
+    margin: auto;
+}
+
+a {
+    color: inherit !important;
+}
+
+#site-header,
+.header,
+.header__action-search,
+.header__action-search-btn,
+.header__action-menu,
+.header__action-menu-btn,
+.footer-nav-widgets-wrapper,
+#site-footer,
+.menu-modal,
+.menu-modal-inner,
+.search-modal-inner,
+.archive-header,
+.singular .entry-header,
+.header,
+.singular .featured-media::before,
+.wp-block-pullquote::before {
+    background-color: white !important;
+}

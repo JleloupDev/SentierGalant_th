@@ -1,0 +1,13 @@
+@use './variables' as *;
+
+@mixin for-lower {
+    @media (max-width: $mediaPhoneWidth) { @content; }
+}
+
+@mixin for-phones {
+    @media (max-width: $mediaTabletWidth) { @content; }
+}
+
+@mixin for-tablets {
+    @media (max-width: $mediaMaxWidth) { @content; }
+}

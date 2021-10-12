@@ -1,0 +1,29 @@
+/*
+Theme Name: SentierGalant_th
+Description: Thème du site www.sentiergalant.com
+Author: jleloupdev@outlook.com
+Template: twentytwenty
+Version: 0.1.0
+*/
+
+@use '0_abstracts' as *;
+
+@use '../../node_modules/normalize.scss/normalize.scss';
+
+@use '2_base/_reset_wpstyle.scss';
+
+@use '5_pages/accueil';
+
+
+
+
+.header {
+    border-color: black;
+}
+
+#commentform {
+    #submit {
+        background-color: $thirdColor;
+        color: black;
+    }
+}

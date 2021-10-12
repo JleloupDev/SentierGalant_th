@@ -1,0 +1,39 @@
+@use '../0_abstracts'as *;
+@use '../4_components/_nav_article.scss';
+@use '../3_layout/header';
+@use '../4_components/article_grid';
+@use '../4_components/sg_popup';
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+    &#hr_bonus_1 {
+        margin-bottom: 0;
+    }
+
+    &#hr_bonus_2 {
+        margin-top: 0;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+#bonus {
+    width: 50%;
+    margin: auto;
+}
+
+.indicates-required {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.field-help {
+    font-size: 1.2rem;
+    font-style: italic;
+}

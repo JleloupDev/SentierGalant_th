@@ -35,7 +35,7 @@ $query_last = new WP_Query( array (
 $postsLast = $query_last->posts;
 ?>
 
-<nav class="nav_article" id="nav_articles_articles">
+<nav class="nav_articles" id="nav_articles_articles">
 	<h3>Nos articles mis en avant</h3>
 	<ul class="last_articles_content">
 		<?php
@@ -47,15 +47,15 @@ $postsLast = $query_last->posts;
 			$post_thumbnail_url = get_the_post_thumbnail_url($p->ID);
         ?>
 
-		<div class="recent_post">
+		<li class="recent_post">
 			<a href="<?php echo $post_url ?>">
 				<img src="<?php echo $post_thumbnail_url; ?>" />
 
-				<h3>
+				<h4>
 					<?php echo $post_title ?>
-				</h3>
+				</h4>
 			</a>
-		</div>
+		</li>
 		<?php
 		endforeach;
 		?>
@@ -71,15 +71,15 @@ $postsLast = $query_last->posts;
 			$post_thumbnail_url = get_the_post_thumbnail_url($p->ID);
         ?>
 
-		<div class="recent_post">
-			<a href="<?php echo $post_url ?>">
-				<img src="<?php echo $post_thumbnail_url; ?>" />
+			<li class="recent_post">
+				<a href="<?php echo $post_url ?>">
+					<img src="<?php echo $post_thumbnail_url; ?>" />
 
-				<h3>
-					<?php echo $post_title ?>
-				</h3>
-			</a>
-		</div>
+					<h3>
+						<?php echo $post_title ?>
+					</h3>
+				</a>
+			</li>
 
 		<?php
 		endforeach;

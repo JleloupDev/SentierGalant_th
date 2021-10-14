@@ -436,6 +436,10 @@ a {
   background-color: white !important;
 }
 
+.featured-media-inner .section-inner {
+  left: 0 !important;
+}
+
 .articles-hint ul {
   width: 80%;
   margin: auto;

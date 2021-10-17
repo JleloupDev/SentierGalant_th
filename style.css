@@ -472,6 +472,11 @@ a {
   height: 100%;
   object-fit: cover;
 }
+.articles-hint li .squared-container img:hover, .articles-last li .squared-container img:hover {
+  box-sizing: border-box;
+  border: 2px solid black;
+  filter: grayscale(0.7);
+}
 .articles-hint li h4, .articles-last li h4 {
   margin: 0;
   padding: 0;

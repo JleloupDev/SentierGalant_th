@@ -408,7 +408,7 @@ footer {
   background-color: #FFFF !important;
   font-family: "Bentham", serif !important;
   background-color: white !important;
-  min-width: 275px;
+  min-width: 320px;
   max-width: 1260px;
   margin: auto;
 }
@@ -440,7 +440,11 @@ a {
   left: 0 !important;
 }
 
-.articles-hint ul {
+.singular .featured-media-inner {
+  left: 0 !important;
+}
+
+.articles-hint ul, .articles-last ul {
   width: 80%;
   margin: auto;
   display: flex;
@@ -448,7 +452,7 @@ a {
   justify-content: space-between;
   padding: 0;
 }
-.articles-hint li {
+.articles-hint li, .articles-last li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -456,19 +460,19 @@ a {
   height: 100%;
   /* border: 1px solid green; */
 }
-.articles-hint li .squared-container {
+.articles-hint li .squared-container, .articles-last li .squared-container {
   position: relative;
   width: 100%;
   padding: 0;
   padding-bottom: 100%;
 }
-.articles-hint li .squared-container img {
+.articles-hint li .squared-container img, .articles-last li .squared-container img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.articles-hint li h4 {
+.articles-hint li h4, .articles-last li h4 {
   margin: 0;
   padding: 0;
   height: 30%;
@@ -476,13 +480,18 @@ a {
   font-size: medium;
   text-align: center;
 }
-.articles-hint li a:link, .articles-hint li a:visited, .articles-hint li a:hover, .articles-hint li a:active {
+.articles-hint li a:link, .articles-hint li a:visited, .articles-hint li a:hover, .articles-hint li a:active, .articles-last li a:link, .articles-last li a:visited, .articles-last li a:hover, .articles-last li a:active {
   text-decoration: none;
+}
+
+body {
+  min-width: 320px;
+  max-width: 1400px;
 }
 
 .header {
   display: grid;
-  grid-template-rows: 25% 50% 25%;
+  grid-template-columns: 25% 50% 25%;
 }
 .header__logo {
   grid-column: 1;
@@ -560,6 +569,11 @@ a {
 .header__menu ul li a {
   color: #b6721a !important;
 }
+@media (max-width: 480px) {
+  .header .header__titles h1 {
+    font-size: 3rem;
+  }
+}
 
 #main_ba {
   max-width: max(80%, 1168px);
@@ -627,7 +641,7 @@ a {
   display: block;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #main_ba {
     display: flex;
     flex-direction: column;
@@ -759,10 +773,6 @@ Author: jleloupdev@outlook.com
 Template: twentytwenty
 Version: 0.1.0
 */
-.header {
-  border-color: black;
-}
-
 #commentform #submit {
   background-color: #7a3609;
   color: black;

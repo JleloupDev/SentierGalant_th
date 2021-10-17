@@ -1,8 +1,8 @@
 @use '../0_abstracts' as *;
 
 .header {
-    display:grid;
-    grid-template-rows: 25% 50% 25%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
 
     &__logo {
 
@@ -93,6 +93,14 @@
                 a {
                     color: $secondColor !important
                 }
+            }
+        }
+    }
+
+    @media (max-width: $mediaPhoneWidth) {
+        .header__titles {
+            h1 {
+                font-size: 3rem;
             }
         }
     }

@@ -35,9 +35,10 @@ $query_last = new WP_Query( array (
 $postsLast = $query_last->posts;
 ?>
 
-<nav class="nav_articles" id="nav_articles_articles">
-	<h3>Nos articles mis en avant</h3>
-	<ul class="last_articles_content">
+<h3>Nos articles mis en avant</h3>
+
+<nav class="articles-hint">
+	<ul>
 		<?php
 		foreach($postsTop as $p) :
 			$post_id        = $p->ID;
@@ -47,21 +48,27 @@ $postsLast = $query_last->posts;
 			$post_thumbnail_url = get_the_post_thumbnail_url($p->ID);
         ?>
 
-		<li class="recent_post">
+		<li class="articles-hint__posts">
 			<a href="<?php echo $post_url ?>">
-				<img src="<?php echo $post_thumbnail_url; ?>" />
+				<div class="squared-container">
+					<img src="<?php echo $post_thumbnail_url; ?>" />
+				</div>
 
 				<h4>
 					<?php echo $post_title ?>
 				</h4>
 			</a>
 		</li>
+
 		<?php
 		endforeach;
 		?>
 	</ul>
+</nav>
+
+<nav class="articles-last">
 	<h3>Nos derniers articles</h3>
-	<ul class="last_articles_content">
+	<ul>
 		<?php
 		foreach($postsLast as $p) :
 			$post_id        = $p->ID;
@@ -71,9 +78,11 @@ $postsLast = $query_last->posts;
 			$post_thumbnail_url = get_the_post_thumbnail_url($p->ID);
         ?>
 
-			<li class="recent_post">
+			<li class="articles-last__posts">
 				<a href="<?php echo $post_url ?>">
-					<img src="<?php echo $post_thumbnail_url; ?>" />
+					<div class="squared-container">
+						<img src="<?php echo $post_thumbnail_url; ?>" />
+					</div>
 
 					<h3>
 						<?php echo $post_title ?>

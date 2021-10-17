@@ -1,5 +1,6 @@
 @use '../0_abstracts'as *;
 @use '../4_components/_nav_article.scss';
+@use '../3_layout/base_layout';
 @use '../3_layout/header';
 @use '../4_components/article_grid';
 @use '../4_components/sg_popup';

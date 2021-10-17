@@ -1,3 +1,5 @@
+@use '../0_abstracts' as *;
+
 #main_ba {
     max-width: max(80%, 1168px);
     margin: auto;
@@ -88,7 +90,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: $mediaTabletWidth) {
     #main_ba {
         display: flex;
         flex-direction: column;

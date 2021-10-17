@@ -1,6 +1,6 @@
 @use '../0_abstracts'as *;
 
-.articles-hint {
+.articles-hint, .articles-last {
     ul {
         width: 80%;
         margin: auto;
@@ -56,70 +56,3 @@
         }
     }
 }
-
-
-
-
-
-// .nav_articles {
-//     width: 90%;
-//     margin: auto;
-
-//     h2 {
-//         color: black;
-//         text-align: center;
-//     }
-
-//     .pa_nav_articles_title {
-//         font: inherit;
-//         text-decoration: inherit;
-//         color: inherit;
-//     }
-// }
-
-// .last_articles_content {
-//     display: flex;
-//     flex-grow: 0;
-//     flex-basis: 1;
-//     flex-direction: row;
-
-//     @media (max-width: 600px) {
-//         & {
-//             flex-direction: column;
-//         }
-//     }
-
-//     .recent_post {
-//         flex-basis: 20%;
-//         padding: 1%;
-
-//         h3 {
-//             font-size: 2rem;
-//             margin-top: 5%;
-//             color: #2F1000;
-//         }
-
-//         img {
-//             width: 100%;
-//             border: 2px solid black;
-//         }
-//     }
-// }
-
-// #nav_articles_articles {
-//     max-width: 50%;
-//     margin: auto;
-
-//     .recent_post {
-//         margin: 0 auto;
-//     }
-// }
-
-// #nav_articles_articles {
-//     max-width: 50%;
-//     margin: auto;
-
-//     .recent_post {
-//         margin: 0 auto;
-//     }
-// }

@@ -1,0 +1,6 @@
+@use '../0_abstracts' as *;
+
+body {
+    min-width: $content-min-width;
+    max-width: $content-max-width;
+}

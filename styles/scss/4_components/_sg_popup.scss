@@ -1,4 +1,4 @@
-@use '0_abstracts' as *;
+@use '../0_abstracts' as *;
 
 //btn for the popup
 .bonus_popup_btn {
@@ -15,14 +15,14 @@
         background-color: #fff;
         font-size: 1em;
         padding: 10px;
-        color: $secondColor;
+        color: $secondColor !important;
         text-decoration: none;
         cursor: pointer;
         transition: all 0.3s ease-out;
         border: 2px solid $secondColor;
 
         &:hover {
-            color: $thirdColor;
+            color: $thirdColor !important;
             border: 2px solid $thirdColor;
             font-weight: bold;
         }

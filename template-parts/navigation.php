@@ -84,9 +84,9 @@ $postsLast = $query_last->posts;
 						<img src="<?php echo $post_thumbnail_url; ?>" />
 					</div>
 
-					<h3>
+					<h4>
 						<?php echo $post_title ?>
-					</h3>
+					</h4>
 				</a>
 			</li>
 

@@ -635,6 +635,9 @@ body {
   text-align: center;
   color: white;
 }
+#main_ba .article_container .article_text h3, #main_ba .article_container .article_text p {
+  text-shadow: black 1px 1px;
+}
 #main_ba .article_container .article_excerpt {
   display: none;
 }

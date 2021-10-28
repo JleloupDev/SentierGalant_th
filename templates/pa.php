@@ -28,7 +28,7 @@ if (!empty($headpage_posts)) {
 ?>
 
 <?php get_header(); ?>
-<?php echo print_r($headpage_posts_i) ?>
+
 <div id="main_ba">
     <div class="article_container" id="img_1">
         <a href="<?php echo $headpage_posts_i[0]["Url"]; ?>">

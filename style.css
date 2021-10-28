@@ -494,6 +494,10 @@ body {
   max-width: 1400px;
 }
 
+.dnone {
+  display: none;
+}
+
 .header {
   display: grid;
   grid-template-columns: 25% 50% 25%;
@@ -523,6 +527,9 @@ body {
   font-size: 4rem;
   margin: 0;
   color: #7a3609 !important;
+}
+.header__titles h1 a {
+  text-decoration: none;
 }
 .header__titles .site-description {
   color: black !important;
@@ -655,7 +662,34 @@ body {
     margin-bottom: 5rem;
   }
 }
-.bonus_popup_btn {
+.sg_btn {
+  background-color: #fff !important;
+  font-size: 1em;
+  padding: 10px;
+  color: #b6721a !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border: 2px solid #b6721a !important;
+}
+.sg_btn:hover {
+  color: #7a3609 !important;
+  border: 2px solid #7a3609 !important;
+  font-weight: bold;
+}
+
+/*
+La popup doit être constituée d'un bouton :active
+
+div .sg_bonus_popup_btn
+    .sg button
+
+
+Et d'une popup.
+
+
+*/
+.sg_bonus_popup_btn {
   width: 80%;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.2);
@@ -664,21 +698,6 @@ body {
   border-radius: 20px/50px;
   background-clip: padding-box;
   text-align: center;
-}
-.bonus_popup_btn .button {
-  background-color: #fff;
-  font-size: 1em;
-  padding: 10px;
-  color: #b6721a !important;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-  border: 2px solid #b6721a;
-}
-.bonus_popup_btn .button:hover {
-  color: #7a3609 !important;
-  border: 2px solid #7a3609;
-  font-weight: bold;
 }
 
 .overlay {
@@ -689,34 +708,48 @@ body {
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 2;
-}
-
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
   z-index: 2;
 }
 
 .popup {
-  margin: 70px auto;
+  height: 90%;
+  overflow: auto;
+  margin: 1rem auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 40%;
   position: relative;
   transition: all 5s ease-in-out;
 }
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
+.popup h3 {
+  color: black;
+  text-align: center;
   font-family: Tahoma, Arial, sans-serif;
+  font-size: 3rem;
 }
-
-.popup .close {
+.popup h3 span {
+  display: block;
+  font-size: 4rem;
+  color: #7a3609 !important;
+}
+@media (max-width: 1260px) {
+  .popup {
+    width: 60%;
+  }
+  .popup h3 {
+    font-size: 2rem;
+  }
+  .popup h3 span {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .popup {
+    width: 90%;
+  }
+}
+.popup .close_popup {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -726,25 +759,28 @@ body {
   text-decoration: none;
   color: #333;
 }
-
-.popup .close:hover {
+.popup .close_popup:hover {
   color: #06D85F;
 }
-
 .popup .content {
-  max-height: 30%;
+  max-width: 40rem;
+  margin: auto;
   overflow: auto;
 }
-
-@media screen and (max-width: 700px) {
-  .box {
-    width: 70%;
-  }
-
-  .popup {
-    width: 70%;
-  }
+.popup .content p {
+  text-align: center;
 }
+.popup .content .input_group {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.popup .content .sg_btn_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
 hr {
   border: 0;
   height: 1px;

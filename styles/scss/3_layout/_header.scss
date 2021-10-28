@@ -32,6 +32,10 @@
             font-size: 4rem;
             margin: 0;
             color: $thirdColor !important;
+
+            a {
+                text-decoration: none;
+            }
         }
 
         .site-description {

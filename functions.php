@@ -45,3 +45,14 @@ function add_theme_menu_item()
 }
 
 add_action("admin_menu", "add_theme_menu_item");
+
+
+
+//TODO: Ce code inclue les scrips dans toutes les pages
+function collectiveray_load_js_script() {
+    // wp_enqueue_script('js-file', 'PATH_TO_JS_FILE', array('jquery'), '', false);
+    //or use the version below if you know exactly where the file is
+    wp_enqueue_script( 'js-file', get_stylesheet_directory_uri() . '/Scripts/sgpopup.js');
+}
+
+add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');

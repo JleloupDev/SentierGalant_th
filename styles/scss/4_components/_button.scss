@@ -1,0 +1,20 @@
+@use '../0_abstracts' as *;
+
+//btn for the popup
+
+.sg_btn {
+    background-color: #fff !important;
+    font-size: 1em;
+    padding: 10px;
+    color: $secondColor !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    border: 2px solid $secondColor !important;
+
+    &:hover {
+        color: $thirdColor !important;
+        border: 2px solid $thirdColor !important;
+        font-weight: bold;
+    }
+}

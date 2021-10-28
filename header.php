@@ -45,7 +45,9 @@
 
 			<div class="header__titles">
 				<h1>
-					<?php echo get_bloginfo('name'); ?>
+					<a href="<?php echo get_bloginfo('wpurl')?>">
+						<?php echo get_bloginfo('name'); ?>
+					</a>
 				</h1>
 
 				<!-- Coming with "class=site-description" -->

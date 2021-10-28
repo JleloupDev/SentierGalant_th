@@ -66,7 +66,7 @@ $postsLast = $query_last->posts;
 	</ul>
 </nav>
 
-<nav class="articles-last">
+<nav class="articles-last" style="display: none;">
 	<h3>Nos derniers articles</h3>
 	<ul>
 		<?php

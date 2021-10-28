@@ -1,7 +1,20 @@
 @use '../0_abstracts' as *;
+@use './button.scss' as *;
 
-//btn for the popup
-.bonus_popup_btn {
+
+/*
+La popup doit être constituée d'un bouton :active
+
+div .sg_bonus_popup_btn
+    .sg button
+
+
+Et d'une popup.
+
+
+*/
+
+.sg_bonus_popup_btn {
     width: 80%;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.2);
@@ -10,26 +23,7 @@
     border-radius: 20px/50px;
     background-clip: padding-box;
     text-align: center;
-
-    .button {
-        background-color: #fff;
-        font-size: 1em;
-        padding: 10px;
-        color: $secondColor !important;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.3s ease-out;
-        border: 2px solid $secondColor;
-
-        &:hover {
-            color: $thirdColor !important;
-            border: 2px solid $thirdColor;
-            font-weight: bold;
-        }
-    }
-
 }
-
 
 //Popup
 .overlay {
@@ -40,60 +34,84 @@
     right: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
 
     z-index: 2;
 }
 
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-    z-index: 2;
-}
 
 .popup {
-    margin: 70px auto;
+    height: 90%;
+    overflow: auto;
+    margin: 1rem auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 40%;
     position: relative;
     transition: all 5s ease-in-out;
-}
 
-.popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-}
+    h3 {
+        color: black;
+        text-align: center;
+        font-family: Tahoma, Arial, sans-serif;
+        font-size: 3rem;
 
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-
-.popup .close:hover {
-    color: #06D85F;
-}
-
-.popup .content {
-    max-height: 30%;
-    overflow: auto;
-}
-
-@media screen and (max-width: 700px) {
-    .box {
-        width: 70%;
+        span {
+            display: block;
+            font-size: 4rem;
+            color: #7a3609 !important;
+        }
     }
 
-    .popup {
-        width: 70%;
+    @include for-tablets {
+        width: 60%;
+
+        h3 {
+            font-size: 2rem;
+            span {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    @include for-phones {
+        width: 90%;
+    }
+
+    .close_popup {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+                color: #06D85F;
+        }
+    }
+
+    .content {
+        max-width: 40rem;
+        margin: auto;
+        overflow: auto;
+        
+        p {
+            text-align: center;
+        }
+
+        .input_group {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .sg_btn_container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+        }
     }
 }

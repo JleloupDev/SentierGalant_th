@@ -1,5 +1,4 @@
 <div class="popup">
-    <a id="close_popup" class="close_popup" href="#">&times;</a>
     <div class="content">
             <div id="sg-form-header">
                 <h3><p>Découvrez notre <span>Guide du Gentleman</span></p></h3>

@@ -94,7 +94,7 @@
     }
 }
 
-@media (max-width: $mediaTabletWidth) {
+@include for-tablets {
     #main_ba {
         display: flex;
         flex-direction: column;

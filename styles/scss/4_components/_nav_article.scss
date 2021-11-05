@@ -19,8 +19,19 @@
         //Flex basis is used to integrated spacing between elements
         //We cant use padding because we want li's width to be equals
         flex-basis: 18%;
-
         height: 100%;
+
+        &:not(:nth-child(-n+3)) {
+            @include for-phones {
+                display: none;
+            }
+        }
+
+        &:nth-child(-n+3) {
+            @include for-phones {
+                flex-basis: 30% !important;
+            }
+        }
 
         /* border: 1px solid green; */
         .squared-container {

@@ -35,7 +35,7 @@
 	$query_top = new WP_Query( array (
 		'post_type'=> 'post',
 		'posts_per_page' => -1,
-		'post_status' => "publish",
+		'public' => "true",
 		'cat'=> $cat->cat_ID));
 
 	$postsTop = $query_top->posts;

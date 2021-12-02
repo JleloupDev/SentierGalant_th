@@ -1,6 +1,6 @@
 @use '../0_abstracts'as *;
 
-.articles-hint, .articles-last {
+.articles-hint {
     ul {
         width: 80%;
         margin: auto;
@@ -12,14 +12,16 @@
         padding: 0;
     }
 
+    &.full-width ul{
+        width: 100%;
+    }
+
     li {
         @include no-spacers;
         list-style: none;
 
-        //Flex basis is used to integrated spacing between elements
-        //We cant use padding because we want li's width to be equals
-        flex-basis: 18%;
         height: 100%;
+        margin-bottom: 5rem;
 
         &:not(:nth-child(-n+3)) {
             @include for-phones {
@@ -73,5 +75,16 @@
                 text-decoration: none;
             }
         }
+    }
+
+    //Flex basis is used to integrated spacing between elements
+    //We cant use padding because we want li's width to be equals
+    //specification of the class is used to define the number of columns, wich depends of the flex-basis
+    &--two-columns li {
+        flex-basis: 45%;
+    }
+
+    &--five-columns li {
+        flex-basis: 18%;
     }
 }

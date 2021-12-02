@@ -7,10 +7,6 @@
  * @since Twenty Twenty 1.0
  */
 
-$next_post = get_next_post();
-$prev_post = get_previous_post();
-
-
 $postsTop;
 $post_not_in_past = [get_the_ID()];
 $postsLast;
@@ -37,7 +33,7 @@ $postsLast = $query_last->posts;
 
 <h3>Nos articles mis en avant</h3>
 
-<nav class="articles-hint">
+<nav class="articles-hint articles-hint--five-columns">
 	<ul>
 		<?php
 		foreach($postsTop as $p) :
@@ -66,7 +62,7 @@ $postsLast = $query_last->posts;
 	</ul>
 </nav>
 
-<nav class="articles-last" style="display: none;">
+<nav class="articles-hint articles-hint--five-columns" style="display: none;">
 	<h3>Nos derniers articles</h3>
 	<ul>
 		<?php

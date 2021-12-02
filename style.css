@@ -456,7 +456,7 @@ a {
   justify-content: center !important;
 }
 
-.articles-hint ul, .articles-last ul {
+.articles-hint ul {
   width: 80%;
   margin: auto;
   display: flex;
@@ -464,42 +464,45 @@ a {
   justify-content: space-between;
   padding: 0;
 }
-.articles-hint li, .articles-last li {
+.articles-hint.full-width ul {
+  width: 100%;
+}
+.articles-hint li {
   margin: 0;
   padding: 0;
   list-style: none;
-  flex-basis: 18%;
   height: 100%;
+  margin-bottom: 5rem;
   /* border: 1px solid green; */
 }
 @media (max-width: 768px) {
-  .articles-hint li:not(:nth-child(-n+3)), .articles-last li:not(:nth-child(-n+3)) {
+  .articles-hint li:not(:nth-child(-n+3)) {
     display: none;
   }
 }
 @media (max-width: 768px) {
-  .articles-hint li:nth-child(-n+3), .articles-last li:nth-child(-n+3) {
+  .articles-hint li:nth-child(-n+3) {
     flex-basis: 30% !important;
   }
 }
-.articles-hint li .squared-container, .articles-last li .squared-container {
+.articles-hint li .squared-container {
   position: relative;
   width: 100%;
   padding: 0;
   padding-bottom: 100%;
 }
-.articles-hint li .squared-container img, .articles-last li .squared-container img {
+.articles-hint li .squared-container img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.articles-hint li .squared-container img:hover, .articles-last li .squared-container img:hover {
+.articles-hint li .squared-container img:hover {
   box-sizing: border-box;
   border: 2px solid black;
   filter: grayscale(0.7);
 }
-.articles-hint li h4, .articles-last li h4 {
+.articles-hint li h4 {
   margin: 0;
   padding: 0;
   height: 30%;
@@ -507,8 +510,14 @@ a {
   font-size: medium;
   text-align: center;
 }
-.articles-hint li a:link, .articles-hint li a:visited, .articles-hint li a:hover, .articles-hint li a:active, .articles-last li a:link, .articles-last li a:visited, .articles-last li a:hover, .articles-last li a:active {
+.articles-hint li a:link, .articles-hint li a:visited, .articles-hint li a:hover, .articles-hint li a:active {
   text-decoration: none;
+}
+.articles-hint--two-columns li {
+  flex-basis: 45%;
+}
+.articles-hint--five-columns li {
+  flex-basis: 18%;
 }
 
 body {

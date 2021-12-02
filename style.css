@@ -471,6 +471,7 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-basis: 18%;
   height: 100%;
   margin-bottom: 5rem;
   /* border: 1px solid green; */
@@ -515,9 +516,6 @@ a {
 }
 .articles-hint--two-columns li {
   flex-basis: 45%;
-}
-.articles-hint--five-columns li {
-  flex-basis: 18%;
 }
 
 body {

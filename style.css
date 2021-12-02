@@ -448,6 +448,14 @@ a {
   margin: auto;
 }
 
+.wp-block-latest-posts.columns-4 li {
+  width: 20% !important;
+}
+
+.wp-block-latest-posts__list {
+  justify-content: center !important;
+}
+
 .articles-hint ul, .articles-last ul {
   width: 80%;
   margin: auto;

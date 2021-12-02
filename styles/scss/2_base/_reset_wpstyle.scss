@@ -51,3 +51,13 @@ a {
 .featured-media {
     margin: auto;
 }
+
+//To have 4 columns on the predefined articles blocks
+.wp-block-latest-posts.columns-4 li {
+    width: 20% !important;
+}
+
+//To center the columns on predefines articles blocks
+.wp-block-latest-posts__list {
+    justify-content: center !important;
+}

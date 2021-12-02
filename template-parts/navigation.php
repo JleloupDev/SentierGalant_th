@@ -26,7 +26,9 @@ $query_last = new WP_Query( array (
 	'post_type'=> 'post',
 	'posts_per_page' => 5,
 	'post__not_in' => $post_not_in_past,
-	'orderby' => 'date'));
+	'orderby' => 'date',
+	'post_status' => "publish"
+));
 
 $postsLast = $query_last->posts;
 ?>

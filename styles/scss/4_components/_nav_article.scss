@@ -20,6 +20,7 @@
         @include no-spacers;
         list-style: none;
 
+        flex-basis: 18%;
         height: 100%;
         margin-bottom: 5rem;
 
@@ -82,9 +83,5 @@
     //specification of the class is used to define the number of columns, wich depends of the flex-basis
     &--two-columns li {
         flex-basis: 45%;
-    }
-
-    &--five-columns li {
-        flex-basis: 18%;
     }
 }

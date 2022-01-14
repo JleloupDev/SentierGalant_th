@@ -23,8 +23,6 @@ if (!empty($headpage_posts)) {
         );
     }
 }
-
-
 ?>
 
 <?php get_header(); ?>

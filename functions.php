@@ -19,6 +19,9 @@ define('DISALLOW_FILE_EDIT', true);
 
 //Generate all thumnails
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'sidebar-thumb', 120, 120, true ); // Hard Crop Mode
+add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
+add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles()

@@ -73,7 +73,7 @@ $postsLast = $query_last->posts;
 			$post_url       = get_permalink($p->ID);
 			$post_title     = $p->post_title;
 			$post_content   = $p->post_content;
-			$post_thumbnail_url = get_the_post_thumbnail_url($p->ID);
+			$post_thumbnail_url = get_the_post_thumbnail_url($p->ID, $size="post-thumbnails");
         ?>
 
 			<li class="articles-last__posts">

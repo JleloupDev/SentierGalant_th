@@ -32,7 +32,7 @@ if (!empty($headpage_posts)) {
 <div id="main_ba">
     <div class="article_container" id="img_1">
         <a href="<?php echo $headpage_posts_i[0]["Url"]; ?>">
-            <img src="<?php echo $headpage_posts_i[0]["Thumbnail"]; ?>" alt="Thumbnail for first pic">
+            <img src="<?php echo $headpage_posts_i[0]["Thumbnail"]; ?>" alt="Thumbnail for first pic" loading="lazy">
         </a>
 
         <div class="article_text">
@@ -50,7 +50,7 @@ if (!empty($headpage_posts)) {
 
     <div class="article_container" id="img_2">
         <a href="<?php echo $headpage_posts_i[1]["Url"]; ?>">
-            <img src="<?php echo $headpage_posts_i[1]["Thumbnail"]; ?>" alt="Thumbnail for second pic">
+            <img src="<?php echo $headpage_posts_i[1]["Thumbnail"]; ?>" alt="Thumbnail for second pic" loading="lazy">
         </a>
 
         <div class="article_text">
@@ -68,7 +68,7 @@ if (!empty($headpage_posts)) {
 
     <div class="article_container" id="img_3">
         <a href="<?php echo $headpage_posts_i[2]["Url"]; ?>">
-            <img src="<?php echo $headpage_posts_i[2]["Thumbnail"]; ?>" alt="Thumbnail for third pic">
+            <img src="<?php echo $headpage_posts_i[2]["Thumbnail"]; ?>" alt="Thumbnail for third pic" loading="lazy">
         </a>
 
         <div class="article_text">
@@ -114,7 +114,7 @@ if (!empty($headpage_posts)) {
                 <li class="articles-hint__posts">
                     <a href="<?php echo $post_url ?>">
                         <div class="squared-container">
-                            <img src="<?php echo $post_thumbnail_url; ?>" />
+                            <img src="<?php echo $post_thumbnail_url; ?>" loading="lazy" />
                         </div>
 
                         <h4>

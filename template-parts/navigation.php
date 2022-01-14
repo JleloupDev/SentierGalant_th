@@ -79,7 +79,7 @@ $postsLast = $query_last->posts;
 			<li class="articles-last__posts">
 				<a href="<?php echo $post_url ?>">
 					<div class="squared-container">
-						<img src="<?php echo $post_thumbnail_url; ?>" />
+						<img src="<?php echo $post_thumbnail_url; ?>" loading="lazy" />
 					</div>
 
 					<h4>

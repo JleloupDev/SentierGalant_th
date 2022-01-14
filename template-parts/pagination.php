@@ -47,7 +47,6 @@ if ( strpos( $posts_pagination, 'next page-numbers' ) === false ) {
 if ( $posts_pagination ) { ?>
 
 	<div class="pagination-wrapper section-inner">
-		aaaaaaaaaaa
 		<hr class="styled-separator pagination-separator is-style-wide" aria-hidden="true" />
 		<?php echo $posts_pagination; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- already escaped during generation. ?>
 

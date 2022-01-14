@@ -17,6 +17,9 @@ add_filter('login_errors', 'ps_disable_login_errors');
 // Désactive l'édition des fichiers via interace WP
 define('DISALLOW_FILE_EDIT', true);
 
+//Generate all thumnails
+add_theme_support( 'post-thumbnails' );
+
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles()
 {

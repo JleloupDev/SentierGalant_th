@@ -69,21 +69,9 @@
 			</button>
 		</div>
 
-		<!-- <div class="header__action-search">
-			<button class="header__action-search-btn" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-				<span class="toggle-inner">
-					<span class="toggle-icon">
-						<?php twentytwenty_the_theme_svg('search'); ?>
-					</span>
-					<span class="toggle-text"><?php _e('Search', 'twentytwenty'); ?></span>
-				</span>
-			</button>
-		</div> -->
-
 		<?php $enable_header_search = get_theme_mod('enable_header_search', true); ?>
 
 		<div class="header__menu">
-
 			<?php
 			if (!wp_is_mobile()) {
 				if (has_nav_menu('primary') || !has_nav_menu('expanded')) {
@@ -121,21 +109,13 @@
 									<span class="toggle-inner">
 										<span class="toggle-icon">
 											<!-- <?php twentytwenty_the_theme_svg('search'); ?> -->
-											<?php
-												$TEMPLATE_PATH = get_stylesheet_directory_uri();
-												// $TEMPLATE_PATH = parse_url($TEMPLATE_PATH, PHP_URL_PATH);
-											?>
-											<img src="<?php echo $TEMPLATE_PATH; ?>/styles/img/search-thin.svg" width="20px" height="20px"/>
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/styles/img/search-thin.svg" width="20px" height="20px"/>
 										</span>
-										<!-- <i class="fa-thin fa-magnifying-glass"></i> -->
-										<!-- <span class="toggle-text"><?php _e('Search', 'twentytwenty'); ?></span> -->
 									</span>
 								</button><!-- .search-toggle -->
 							</li>
 						</ul>
-
 					</nav><!-- .primary-menu-wrapper -->
-
 				<?php
 				}
 			} else {

@@ -60,17 +60,6 @@
         }
     }
 
-    // &__action-search {
-    //     grid-column: 3;
-    //     grid-row: 1;
-
-    //     padding-top: 1rem;
-
-    //     button {
-    //         width: 100%;
-    //     }
-    // }
-
     &__amenu {
         grid-column: 1/4;
         grid-row: 2;
@@ -131,15 +120,21 @@
                 a {
                     text-align: center;
                     text-decoration: none;
+                }
 
-                    // &:hover, &:visited, &:link, &:active {
-                    //     text-decoration: none;
-                    // }
+                span.icon {
+                    display: none;
                 }
 
                 button {
                     padding: 0;
                     width: 100%;
+                }
+
+                .sub-menu {
+                    flex-direction: column;
+                    background-color: white;
+                    color: black;
                 }
             }
         }

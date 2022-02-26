@@ -633,9 +633,17 @@ body {
   text-align: center;
   text-decoration: none;
 }
+.header__menu ul li span.icon {
+  display: none;
+}
 .header__menu ul li button {
   padding: 0;
   width: 100%;
+}
+.header__menu ul li .sub-menu {
+  flex-direction: column;
+  background-color: white;
+  color: black;
 }
 @media (max-width: 480px) {
   .header .header__titles h1 {

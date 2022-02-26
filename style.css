@@ -642,7 +642,7 @@ body {
 }
 .header__menu ul li .sub-menu {
   flex-direction: column;
-  background-color: white;
+  background-color: white !important;
   color: black;
 }
 @media (max-width: 480px) {

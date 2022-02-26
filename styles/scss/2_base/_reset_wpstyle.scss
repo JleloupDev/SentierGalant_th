@@ -9,7 +9,9 @@ body,
 header,
 footer {
     background-color: $mainColor !important;
-    font-family: 'Bentham', serif !important;
+    // font-family: 'Bentham', serif !important;
+    // font-family: 'Crimson Pro', serif;
+    font-family: 'Prompt', sans-serif;
     background-color: white !important;
 
     min-width: $mediaLowerWidth;

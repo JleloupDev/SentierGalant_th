@@ -29,7 +29,10 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-size: 6rem;
+            font-weight: normal;
+            letter-spacing: normal;
             margin: 0;
             color: $thirdColor !important;
 
@@ -57,18 +60,18 @@
         }
     }
 
-    &__action-search {
-        grid-column: 3;
-        grid-row: 1;
+    // &__action-search {
+    //     grid-column: 3;
+    //     grid-row: 1;
 
-        padding-top: 1rem;
+    //     padding-top: 1rem;
 
-        button {
-            width: 100%;
-        }
-    }
+    //     button {
+    //         width: 100%;
+    //     }
+    // }
 
-    &__menu {
+    &__amenu {
         grid-column: 1/4;
         grid-row: 2;
 
@@ -96,6 +99,47 @@
 
                 a {
                     color: $secondColor !important
+                }
+            }
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        grid-column: 1/4;
+        grid-row: 2;
+        border-top: 2px solid black;
+        margin-top: 2rem;
+        max-width: max(80%, 1168px);
+        margin: auto;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+
+        @include for-phones {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                margin: 0.8rem 0 0 2.5rem;
+                padding: 2rem 0 2rem 0;
+                flex-grow: 1;
+
+                a {
+                    text-align: center;
+                    text-decoration: none;
+
+                    // &:hover, &:visited, &:link, &:active {
+                    //     text-decoration: none;
+                    // }
+                }
+
+                button {
+                    padding: 0;
+                    width: 100%;
                 }
             }
         }
